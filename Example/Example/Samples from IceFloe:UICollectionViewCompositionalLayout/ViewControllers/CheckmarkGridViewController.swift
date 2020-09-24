@@ -25,20 +25,23 @@ class CheckmarkGridViewController: UIViewController, UICollectionViewDelegate {
     }
 
     private func createLayout() -> UICollectionViewLayout {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                             heightDimension: .fractionalHeight(1.0))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8)
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .fractionalHeight(0.2))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
-                                                         subitem: item, count: 3)
+        
         let suppItemSize = NSCollectionLayoutSize(widthDimension: .absolute(45),
                                                   heightDimension: .absolute(45))
         let suppItemPlace = NSCollectionLayoutAnchor(edges: [.top, .trailing])
         let suppItem = NSCollectionLayoutSupplementaryItem(layoutSize: suppItemSize,
                                                            elementKind: CheckmarkGridViewController.checkMarkElementKind,
                                                            containerAnchor: suppItemPlace)
+        
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                             heightDimension: .fractionalHeight(1.0))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize,supplementaryItems: [])
+        item.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8)
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                               heightDimension: .fractionalHeight(0.2))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
+                                                         subitem: item, count: 3)
+ 
         group.supplementaryItems = [suppItem]
 
         let section = NSCollectionLayoutSection(group: group)
@@ -86,6 +89,7 @@ class CheckmarkGridViewController: UIViewController, UICollectionViewDelegate {
                 withReuseIdentifier: CheckmarkView.reuseIdentifier,
                 for: indexPath) as? CheckmarkView {
 
+                badgeView.backgroundColor = UIColor.cyan
                 // Return the view.
                 return badgeView
             } else {

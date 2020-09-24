@@ -29,7 +29,7 @@ extension ListCell {
         contentView.addSubview(seperatorView)
 
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.adjustsFontForContentSizeCategory = true
+        
         label.font = UIFont.preferredFont(forTextStyle: .body)
         contentView.addSubview(label)
 
@@ -39,8 +39,8 @@ extension ListCell {
         selectedBackgroundView = UIView()
         selectedBackgroundView?.backgroundColor = UIColor.lightGray.withAlphaComponent(0.3)
 
-        let rtl = effectiveUserInterfaceLayoutDirection == .rightToLeft
-        let chevronImageName = rtl ? "chevron.left" : "chevron.right"
+//        let rtl = effectiveUserInterfaceLayoutDirection == .rightToLeft
+        let chevronImageName = true ? "chevron.left" : "chevron.right"
         let chevronImage = UIImage(systemName: chevronImageName)
         accessoryImageView.image = chevronImage
         accessoryImageView.tintColor = UIColor.lightGray.withAlphaComponent(0.7)

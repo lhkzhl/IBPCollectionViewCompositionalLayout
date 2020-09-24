@@ -78,11 +78,11 @@
 		14B9A0B6232FD8730047F51E /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B9A0AF232FD8730047F51E /* TitleView.swift */; };
 		14B9A0B7232FD8730047F51E /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B9A0B0232FD8730047F51E /* BackgroundView.swift */; };
 		14EFF2BA232F3CC300368681 /* IBPCollectionViewCompositionalLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EFF2B9232F3CC300368681 /* IBPCollectionViewCompositionalLayout.framework */; };
-		14EFF2BB232F3CC300368681 /* IBPCollectionViewCompositionalLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14EFF2B9232F3CC300368681 /* IBPCollectionViewCompositionalLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		14EFF2C7232F3CFA00368681 /* DiffableDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EFF2C4232F3CF100368681 /* DiffableDataSources.framework */; };
-		14EFF2C8232F3CFA00368681 /* DiffableDataSources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14EFF2C4232F3CF100368681 /* DiffableDataSources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		14EFF2D2232F3D2200368681 /* DifferenceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EFF2CF232F3D1C00368681 /* DifferenceKit.framework */; };
-		14EFF2D3232F3D2200368681 /* DifferenceKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14EFF2CF232F3D1C00368681 /* DifferenceKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D9D5AAE5251C7D6400583A4B /* DiffableDataSources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14EFF2C4232F3CF100368681 /* DiffableDataSources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D9D5AAE6251C7D6A00583A4B /* DifferenceKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14EFF2CF232F3D1C00368681 /* DifferenceKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D9D5AAE7251C7D7000583A4B /* IBPCollectionViewCompositionalLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14EFF2B9232F3CC300368681 /* IBPCollectionViewCompositionalLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,9 +123,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				14EFF2C8232F3CFA00368681 /* DiffableDataSources.framework in Embed Frameworks */,
-				14EFF2BB232F3CC300368681 /* IBPCollectionViewCompositionalLayout.framework in Embed Frameworks */,
-				14EFF2D3232F3D2200368681 /* DifferenceKit.framework in Embed Frameworks */,
+				D9D5AAE7251C7D7000583A4B /* IBPCollectionViewCompositionalLayout.framework in Embed Frameworks */,
+				D9D5AAE6251C7D6A00583A4B /* DifferenceKit.framework in Embed Frameworks */,
+				D9D5AAE5251C7D6400583A4B /* DiffableDataSources.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -738,6 +738,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1423553A231475BF000884C0 /* Example.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 3EQU965GX4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -749,6 +751,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1423553A231475BF000884C0 /* Example.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 3EQU965GX4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -82,7 +82,7 @@ extension ShowcaseGalleryViewController {
             cell.imageContentMode = .scaleAspectFill
             cell.clipsToBounds = true
             cell.layer.cornerRadius = 10
-            cell.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMinXMinYCorner]
+            
             
             return cell
         }

@@ -35,9 +35,6 @@ extension ConferenceNewsFeedCell {
         bodyLabel.translatesAutoresizingMaskIntoConstraints = false
         separatorView.translatesAutoresizingMaskIntoConstraints = false
 
-        titleLabel.adjustsFontForContentSizeCategory = true
-        dateLabel.adjustsFontForContentSizeCategory = true
-        bodyLabel.adjustsFontForContentSizeCategory = true
 
         titleLabel.numberOfLines = 0
         bodyLabel.numberOfLines = 0

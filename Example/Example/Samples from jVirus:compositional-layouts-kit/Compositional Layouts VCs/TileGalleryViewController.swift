@@ -82,7 +82,12 @@ extension TileGalleryViewController {
         collectionView.backgroundColor = .white
         collectionView.isDirectionalLockEnabled = true
         collectionView.alwaysBounceVertical = false
-        collectionView.contentInsetAdjustmentBehavior = .never
+        if #available(iOS 11.0, *) {
+            collectionView.contentInsetAdjustmentBehavior = .never
+        } else {
+            // Fallback on earlier versions
+        }
+
         if layoutBehavior == .orthogonalMagnet {
             collectionView.isPagingEnabled = true
         }
@@ -101,7 +106,7 @@ extension TileGalleryViewController {
             cell.imageContentMode = .scaleAspectFill
             cell.clipsToBounds = true
             cell.layer.cornerRadius = 10
-            cell.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMinXMinYCorner]
+            
             
             return cell
         }

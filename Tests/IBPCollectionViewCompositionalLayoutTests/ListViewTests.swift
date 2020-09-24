@@ -183,7 +183,7 @@ extension ListCell {
         contentView.addSubview(seperatorView)
 
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.adjustsFontForContentSizeCategory = true
+        label.
         label.font = .preferredFont(forTextStyle: .body)
         contentView.addSubview(label)
 

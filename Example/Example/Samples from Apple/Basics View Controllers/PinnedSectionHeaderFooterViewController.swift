@@ -48,6 +48,8 @@ extension PinnedSectionHeaderFooterViewController {
             elementKind: PinnedSectionHeaderFooterViewController.sectionFooterElementKind,
             alignment: .bottom)
         sectionHeader.pinToVisibleBounds = true
+        sectionFooter.pinToVisibleBounds = true
+        sectionFooter.zIndex = 2
         sectionHeader.zIndex = 2
         section.boundarySupplementaryItems = [sectionHeader, sectionFooter]
 
@@ -58,7 +60,8 @@ extension PinnedSectionHeaderFooterViewController {
 
 extension PinnedSectionHeaderFooterViewController {
     func configureHierarchy() {
-        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
+        automaticallyAdjustsScrollViewInsets = false
+        collectionView = UICollectionView(frame: view.bounds.inset(by: UIEdgeInsets(top: 64, left: 0, bottom: 0, right: 0)), collectionViewLayout: createLayout())
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.backgroundColor = .systemBackground
         collectionView.register(ListCell.self, forCellWithReuseIdentifier: ListCell.reuseIdentifier)

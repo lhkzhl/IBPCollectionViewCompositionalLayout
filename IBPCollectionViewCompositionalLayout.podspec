@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
                               You can use new excellent APIs immediately without maintaining two different code bases until iOS 13 would be widely adopted.
                             DESC
   s.homepage              = "https://github.com/kishikawakatsumi/#{s.name}"
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '9.0'
   s.source_files          = 'Sources/**/*.{h,m}'
   s.public_header_files   = "Sources/#{s.name}/include/*.h"
   s.frameworks            = 'UIKit'
